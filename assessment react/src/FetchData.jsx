@@ -17,8 +17,8 @@ const FetchData = () => {
             } else {
                 setError('Erro ao buscar dados')
             }
-        } catch (e) {
-            setError('Erro no fetch', e)
+        } catch (error) {
+            setError('Erro no fetch', error)
         }
     }
 
@@ -32,8 +32,8 @@ const FetchData = () => {
             } else {
                 setError('Erro ao buscar dados')
             }
-        } catch (e) {
-            setError('Erro no fetch', e)
+        } catch (error) {
+            setError('Erro no fetch', error)
         }
     }
 
@@ -47,8 +47,8 @@ const FetchData = () => {
             } else {
                 setError('Erro ao buscar dados')
             }
-        } catch (e) {
-            setError('Erro no fetch', e)
+        } catch (error) {
+            setError('Erro no fetch', error)
         }
     }
 
@@ -64,3 +64,5 @@ const FetchData = () => {
         error,
     }
 }
+
+export default FetchData()
