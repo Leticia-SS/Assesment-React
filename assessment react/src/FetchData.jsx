@@ -22,13 +22,34 @@ const FetchData = () => {
         }
     }
 
-    const fetchComments = async () => {
+    const fetchPosts = async (userId) => {
         setLoading(true)
         try{
-            const response = await fetch('https://jsonplaceholder.typicode.com/comments?postId=${postId}')
+            const response = await fetch(`https://jsonplaceholder.typicode.com/posts/?userId=${userId}`)
+            if(response.ok) {
+                const posts = await response.json()
+                setPosts((prevPosts) => ({
+                    ...prevPosts,
+                    [userId]: posts
+                }));
+            } else {
+                setError('Erro ao buscar dados')
+            }
+        } catch (error) {
+            setError('Erro no fetch', error)
+        }
+    }
+    
+    const fetchComments = async (postId) => {
+        setLoading(true)
+        try{
+            const response = await fetch(`https://jsonplaceholder.typicode.com/comments?postId=${postId}`)
             if(response.ok) {
                 const comments = await response.json()
-                setComments(comments)
+                setComments((prevComments) => ({
+                    ...prevComments,
+                    [postId]: comments
+                }));
             } else {
                 setError('Erro ao buscar dados')
             }
@@ -37,20 +58,6 @@ const FetchData = () => {
         }
     }
 
-    const fetchPosts = async () => {
-        setLoading(true)
-        try{
-            const response = await fetch('https://jsonplaceholder.typicode.com/posts/?userId=${userId}')
-            if(response.ok) {
-                const posts = await response.json()
-                setPosts(posts)
-            } else {
-                setError('Erro ao buscar dados')
-            }
-        } catch (error) {
-            setError('Erro no fetch', error)
-        }
-    }
 
     useEffect(() => {
         fetchUsers();
@@ -60,9 +67,11 @@ const FetchData = () => {
         users,
         comments,
         posts,
+        fetchPosts,
+        fetchComments,
         loading,
         error,
     }
 }
 
-export default FetchData()
+export default FetchData
