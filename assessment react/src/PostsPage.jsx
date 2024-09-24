@@ -7,13 +7,14 @@ import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import './main.css'
 
 const PostsPage = () => {
     const { userId } = useParams()
     const { users, posts, loading, error } = FetchData()
     const navigate = useNavigate()
 
-    if (loading) return <div><img src={Logo} className="logo react" alt="React logo" /></div>
+    if (loading) return <div className='logo-container'><img src={Logo} className="logo react" alt="React logo" /></div>
     if (error) return <div>Erro: {error.message}</div>
 
     const user = users.find((user)=> user.id === parseInt(userId))

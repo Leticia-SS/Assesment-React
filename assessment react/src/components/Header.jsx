@@ -17,7 +17,7 @@ const Header = () => {
         <button className="close-btn" onClick={toggleSidebar}>
           ×
         </button>
-        <nav>
+        <nav className='menu-nav'>
           <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#services">Trenging</a></li>

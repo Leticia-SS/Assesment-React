@@ -1,16 +1,21 @@
 @import '../global.css';
 
 .sidebar {
+    position: fixed;
     top: 0;
     left: 0;
     width: auto;
     height: 100%;
-    background-color: var(--preto);
     color: white;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
     overflow-y: auto;
     z-index: 1000;
+  }
+
+
+  .header-container {
+    background-color: var(--preto);
   }
   
   .sidebar.open {
@@ -47,7 +52,9 @@
   
   nav ul li {
     padding: 15px;
-  }
+    margin-left: 30px; 
+    text-align: left;
+}
   
   nav ul li a {
     color: white;
@@ -60,10 +67,11 @@
   
   @media (min-width: 992px) {
     .sidebar {
-      transform: translateX(0); 
-      height: 100vh;
+        transform: translateX(0); 
+        height: 100vh;
     }
     .menu-toggle, .close-btn {
-      display: none; 
+        display: none; 
     }
+    
   }

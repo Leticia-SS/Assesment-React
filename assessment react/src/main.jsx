@@ -9,7 +9,7 @@ import './main.css'
 const Main = () => {
     const { users, loading, error } = FetchData()
 
-    if (loading) return <div><img src={Logo} className="logo react" alt="React logo" /></div>
+    if (loading) return <div className='logo-container'><img src={Logo} className="logo react" alt="React logo" /></div>
     if (error) return <div>Erro: {error.message}</div>
 
     return (
