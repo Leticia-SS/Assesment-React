@@ -9,6 +9,7 @@
   --azul-escuro: #352cab;
   --azul-claro:  #5170ff;
   --gradiente: linear-gradient(90deg, rgba(81,112,255,1) 0%, rgba(255,102,196,1) 90%);
+  --preto: #242424; 
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -22,7 +23,7 @@
 
 a {
   font-weight: 500;
-  color: var(--lilas);
+  color: white;
   text-decoration: inherit;
 }
 a:hover {
@@ -79,6 +80,15 @@ button:focus-visible {
   button:focus,
   button:focus-visible {
     background-color: var(--azul-escuro);
+  }
+
+  a {
+    font-weight: 500;
+    color: var(--preto);
+    text-decoration: inherit;
+  }
+  a:hover {
+    color: var(--azul-claro);
   }
 }
 
