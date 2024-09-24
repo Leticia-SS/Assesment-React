@@ -1,53 +1,60 @@
 @import '../global.css';
 
+
 .sidebar {
     position: fixed;
     top: 0;
     left: 0;
-    width: auto;
+    width: 200px;
     height: 100%;
     color: white;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
     overflow-y: auto;
-    z-index: 1000;
-  }
-
-
-  .header-container {
-    background-color: var(--preto);
+    z-index: 2;
   }
   
   .sidebar.open {
     transform: translateX(0);
+    z-index: 2;
+    background-image: var(--gradiente);
   }
   
-  .menu-toggle {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    background-color: #333;
+  .menu-toggle-btn {
     color: white;
     border: none;
-    padding: 10px;
+    padding: 5px;
     cursor: pointer;
-    z-index: 1;
+    z-index: 0;
+    background-image: none;
+    height: fit-content;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
+  .fa-bars, .fa-xmark{
+    font-size: 20px;
+  } 
   
   .close-btn {
+    padding: 10px;
     background: none;
     border: none;
     color: white;
-    font-size: 24px;
+    font-size: 16px;
     cursor: pointer;
     position: absolute;
     top: 10px;
-    right: 10px;
+    left: 150px;
+    z-index: 2;
   }
 
   nav ul {
     list-style: none;
     padding: 0;
+    padding-top: 20px;
   }
   
   nav ul li {
@@ -64,14 +71,32 @@
   nav ul li a:hover {
     text-decoration: underline;
   }
+
+  .header-container{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 30px;
+    background-image: var(--gradiente);
+  }
   
   @media (min-width: 992px) {
     .sidebar {
+      position: fixed;
         transform: translateX(0); 
         height: 100vh;
     }
-    .menu-toggle, .close-btn {
+    .menu-toggle-btn, .close-btn {
         display: none; 
+    }
+    .header-container{
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      background-image: var(--gradiente);background-color: var(--gradiente);
     }
     
   }
+

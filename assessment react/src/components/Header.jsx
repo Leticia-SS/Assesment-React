@@ -1,5 +1,9 @@
 import './components.css'
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -10,18 +14,18 @@ const Header = () => {
 
   return (
     <header className='header-container'>
-      <button className="menu-toggle" onClick={toggleSidebar}>
-        ☰
+      <button className="menu-toggle-btn" onClick={toggleSidebar}>
+      <FontAwesomeIcon icon={faBars} />
       </button>
       <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
         <button className="close-btn" onClick={toggleSidebar}>
-          ×
+        <FontAwesomeIcon icon={faXmark}/>
         </button>
         <nav className='menu-nav'>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Trenging</a></li>
-            <li><a href="#about">Settings</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="">Trenging</a></li>
+            <li><a href="">Settings</a></li>
           </ul>
         </nav>
       </aside>

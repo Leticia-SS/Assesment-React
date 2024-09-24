@@ -27,7 +27,7 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: var(--azul-claro);
+  color: var(--azul-escuro);
 }
 
 body {
@@ -55,11 +55,11 @@ button {
   transition: background-color 0.25s;
 }
 button:hover {
-  background-color: var(--azul-claro);
+  background-color: var(--azul-escuro);
 }
 button:focus,
 button:focus-visible {
-  background-color: var(--azul-claro);
+  background-color: var(--azul-escuro);
 }
 
 @media (prefers-color-scheme: light) {
@@ -75,20 +75,17 @@ button:focus-visible {
   }
 
   button:hover {
-    background-image: var(--azul-escuro);
+    background-image: var(--lilas);
   }
   button:focus,
   button:focus-visible {
-    background-color: var(--azul-escuro);
+    background-color: var(--lilas);
   }
 
   a {
     font-weight: 500;
     color: var(--preto);
     text-decoration: inherit;
-  }
-  a:hover {
-    color: var(--azul-claro);
   }
 }
 
@@ -103,10 +100,10 @@ button:focus-visible {
   }
 
   button:hover {
-    background-image: var(--azul-claro);
+    background-image: var(--lilas);
   }
   button:focus,
   button:focus-visible {
-    background-color: var(--azul-claro);
+    background-color: var(--lilas);
   }
 }

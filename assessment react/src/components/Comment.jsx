@@ -1,4 +1,6 @@
 import './components.css'
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
 
 const Comment = ({comment }) => {
 
@@ -19,6 +21,7 @@ const Comment = ({comment }) => {
 
     return (
         <div className='comment-card'>
+            <button className='remove-btn'><FontAwesomeIcon icon={faTrash} /></button>
             <h2>{newName(comment.name)}</h2>
             <p>{username(comment.email)}</p>
             <p>{comment.body}</p>
