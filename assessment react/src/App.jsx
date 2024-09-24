@@ -5,7 +5,6 @@ import UserPage from './UserPage';
 import PostPage from './PostPage';
 import './App.css'
 
-
 const App = () => {
   return (
       <Router>
