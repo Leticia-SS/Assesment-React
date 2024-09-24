@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Main from './main';
-import UserPage from './UserPage';
-import PostPage from './PostPage';
+import PostsPage from './PostsPage';
+import CommentsPage from './CommentsPage';
 import './App.css'
 
 const App = () => {
@@ -10,8 +10,8 @@ const App = () => {
       <Router>
           <Routes>
               <Route path="/" element={<Main />} />
-              <Route path="/users/:userId" element={<UserPage />} />
-              <Route path="/posts/:postId" element={<PostPage />} />
+              <Route path="/users/:userId" element={<PostsPage />} />
+              <Route path="/posts/:postId" element={<CommentsPage />} />
           </Routes>
       </Router>
   );

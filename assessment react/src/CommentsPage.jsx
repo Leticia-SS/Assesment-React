@@ -5,7 +5,7 @@ import FetchData from './FetchData';
 import Post from './components/Post';
 import Comment from './components/Comment'
 
-const PostPage = () => {
+const CommentsPage = () => {
   const { postId } = useParams();
   const { posts, comments, loading, error } = FetchData();
   const navigate = useNavigate()
@@ -30,4 +30,4 @@ const PostPage = () => {
 );
 };
 
-export default PostPage;
+export default CommentsPage;
