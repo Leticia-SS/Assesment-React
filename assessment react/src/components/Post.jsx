@@ -1,8 +1,8 @@
 import './components.css'
 
-const Post = ({post, onClick}) => {
+const Post = ({post}) => {
     return (
-        <div className='post-card' onClick={() => onClick(post.id)}>
+        <div className='post-card' >
             <h2>{post.name}</h2>
             <p>{post.title}</p>
             <p>{post.body}</p>
