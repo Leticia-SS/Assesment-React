@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import FetchData from './FetchData'
 import User from './components/User'
+import Logo from '/logo.png'
 
 const Main = () => {
     const { users, loading, error } = FetchData()
@@ -20,3 +21,5 @@ const Main = () => {
         </div>
     )
 }
+
+export default Main

@@ -8,46 +8,30 @@ const FetchData = () => {
     const [error, setError] = useState(null)
 
     useEffect(() => {
-        const fetchUsers = async () => {
+      const allFetchData = async () => {
           try {
-            const response = await fetch('https://jsonplaceholder.typicode.com/users');
-            const data = await response.json();
-            setUsers(data);
+              const [usersResponse, postsResponse, commentsResponse] = await Promise.all([
+                  fetch('https://jsonplaceholder.typicode.com/users'),
+                  fetch('https://jsonplaceholder.typicode.com/posts'),
+                  fetch('https://jsonplaceholder.typicode.com/comments'),
+              ]);
+
+              const usersData = await usersResponse.json();
+              const postsData = await postsResponse.json();
+              const commentsData = await commentsResponse.json();
+
+              setUsers(usersData);
+              setPosts(postsData);
+              setComments(commentsData);
           } catch (error) {
-            setError(error);
+              setError(error);
           } finally {
-            setLoading(false);
+              setLoading(false);
           }
-        };
-    
-        const fetchPosts = async () => {
-          try {
-            const response = await fetch('https://jsonplaceholder.typicode.com/posts');
-            const data = await response.json();
-            setPosts(data);
-          } catch (error) {
-            setError(error);
-          } finally {
-            setLoading(false);
-          }
-        };
-    
-        const fetchComments = async () => {
-          try {
-            const response = await fetch('https://jsonplaceholder.typicode.com/comments');
-            const data = await response.json();
-            setComments(data);
-          } catch (error) {
-            setError(error);
-          } finally {
-            setLoading(false);
-          }
-        };
-    
-        fetchUsers();
-        fetchPosts();
-        fetchComments();
-      }, []);
+      };
+
+      allFetchData();
+  }, []);
 
     return {
         users,

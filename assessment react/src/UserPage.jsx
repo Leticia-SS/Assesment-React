@@ -1,7 +1,9 @@
 import { useParams } from 'react-router-dom';
+import Logo from '/logo.png'
 import FetchData from './FetchData';
 import User from './components/User';
 import Post from './components/Post';
+import { Link } from 'react-router-dom'
 
 const UserPage = () => {
     const { userId } = useParams()
@@ -15,14 +17,16 @@ const UserPage = () => {
 
     return (
         <div className='main-card'>
-            <User user={user}/>
-            {userPosts.map((post)=>(
+            {user && <User user={user} />}
+            {userPosts.map((post) => (
                 <div key={post.id}>
                     <Link to={`/posts/${post.id}`}>
-                        <Post post={post}/>
+                        <Post post={post} />
                     </Link>
                 </div>
             ))}
         </div>
     )
 }
+
+export default UserPage
