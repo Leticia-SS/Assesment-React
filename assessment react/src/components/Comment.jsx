@@ -2,7 +2,7 @@ import './components.css'
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
 
-const Comment = ({comment }) => {
+const Comment = ({comment, onDelete }) => {
 
     const newName = (name) => {
         const nameSplit = name.split(" ")
@@ -19,20 +19,15 @@ const Comment = ({comment }) => {
         return `@${emailSplit[0]}`
     }
 
-    const deleteComment = (id) => {
-        fetch(`https://jsonplaceholder.typicode.com/comments?postId=${id}`, {
-            method: 'DELETE'
-          })
-          .then(res => res.text())
-      }
+    const deleteComment  = () => {
+        if (window.confirm('Deseja remover este comentário?')) {
+            onDelete(comment.id);
+        }
+    };
 
     return (
         <div className='comment-card'>
-            <button className='remove-btn' onClick={()=>{
-                if (window.confirm('Deseja remover este comentário?')) {
-                    deleteComment(comment.id)
-                }
-            }}><FontAwesomeIcon icon={faTrash} /></button>
+            <button className='remove-btn' onClick={deleteComment}><FontAwesomeIcon icon={faTrash} /></button>
             <h2>{newName(comment.name)}</h2>
             <p>{username(comment.email)}</p>
             <p>{comment.body}</p>
