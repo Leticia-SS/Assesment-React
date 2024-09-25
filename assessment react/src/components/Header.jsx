@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { faBars, faHouse, faHashtag, faGear } from '@fortawesome/free-solid-svg-icons';
 
+
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
 
