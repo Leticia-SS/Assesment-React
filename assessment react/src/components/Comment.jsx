@@ -19,9 +19,20 @@ const Comment = ({comment }) => {
         return `@${emailSplit[0]}`
     }
 
+    const deleteComment = (id) => {
+        fetch(`https://jsonplaceholder.typicode.com/comments?postId=${id}`, {
+            method: 'DELETE'
+          })
+          .then(res => res.text())
+      }
+
     return (
         <div className='comment-card'>
-            <button className='remove-btn'><FontAwesomeIcon icon={faTrash} /></button>
+            <button className='remove-btn' onClick={()=>{
+                if (window.confirm('Deseja remover este comentário?')) {
+                    deleteComment(comment.id)
+                }
+            }}><FontAwesomeIcon icon={faTrash} /></button>
             <h2>{newName(comment.name)}</h2>
             <p>{username(comment.email)}</p>
             <p>{comment.body}</p>
