@@ -120,6 +120,30 @@
   align-items: center;
   justify-content: center;
 }
+
+.comment-card{
+  padding: 20px;
+  background-color: var(--preto);
+  margin: 10px;
+}
+
+.remove-btn{
+  font-size: 12px;
+  height: fit-content;
+}
+.name-btn-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.name-content{
+  margin: 0;
+  font-size: 18px;
+}
+
+.username-content{
+  margin: 0;
+}
   
   @media (min-width: 992px) {
     .sidebar {
@@ -140,7 +164,7 @@
     
   }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   
-}
+} */
 

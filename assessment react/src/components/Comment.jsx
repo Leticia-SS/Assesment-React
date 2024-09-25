@@ -27,10 +27,12 @@ const Comment = ({comment, onDelete }) => {
 
     return (
         <div className='comment-card'>
-            <button className='remove-btn' onClick={deleteComment}><FontAwesomeIcon icon={faTrash} /></button>
-            <h2>{newName(comment.name)}</h2>
-            <p>{username(comment.email)}</p>
-            <p>{comment.body}</p>
+            <div className='name-btn-container'>
+                <h2 className='name-content'>{newName(comment.name)}</h2>
+                <button className='remove-btn' onClick={deleteComment}><FontAwesomeIcon icon={faTrash} /></button>
+            </div>
+            <p className='username-content'>{username(comment.email)}</p>
+            <p className='body-content'>{comment.body}</p>
         </div>
     )
 }
