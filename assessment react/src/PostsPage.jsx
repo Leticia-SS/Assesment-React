@@ -23,14 +23,14 @@ const PostsPage = () => {
     return (
         <div className='landing-page-container'>
         <Header/>
-        <div className='main-card'>
+        <div className='posts-card'>
             <div className='button-container-left'>
                 <button onClick={() => navigate(-1)}>Back</button>
             </div>
             {user && <User user={user} />}
             {userPosts.map((post) => (
                 <div key={post.id}>
-                    <Link to={`/posts/${post.id}`}>
+                    <Link className='card-link' to={`/posts/${post.id}`}>
                         <Post post={post} />
                     </Link>
                 </div>

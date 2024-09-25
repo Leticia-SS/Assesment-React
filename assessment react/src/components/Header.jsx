@@ -1,9 +1,7 @@
 import './components.css'
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
-import { faXmark } from '@fortawesome/free-solid-svg-icons';
-import { faBars, faHouse, faHashtag, faGear } from '@fortawesome/free-solid-svg-icons';
-
+import { faBars, faHouse, faHashtag, faGear, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);

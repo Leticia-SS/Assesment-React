@@ -63,6 +63,11 @@ footer{
   
 }
 
+.posts-card{
+    display: flex;
+    gap: 20px;
+}
+
 @media (min-width: 992px) {
     .landing-page-container {
         display: grid;
@@ -94,3 +99,9 @@ footer{
     
   }
 
+  
+  @media (prefers-color-scheme: dark) {
+    .card-link:hover{
+        color: var(--lilas);
+    }
+  }

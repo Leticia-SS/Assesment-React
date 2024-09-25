@@ -82,11 +82,6 @@ button:focus-visible {
     background-color: var(--lilas);
   }
 
-  a {
-    font-weight: 500;
-    color: var(--preto);
-    text-decoration: inherit;
-  }
 }
 
 @media (prefers-color-scheme: dark) {
