@@ -86,27 +86,35 @@
     padding-left: 30px;
     background-image: var(--gradiente);
   }
+
+  .user-card {
+    background-color: var(--preto); 
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 180px;
+}
+
+.user-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
   
   @media (min-width: 992px) {
     .sidebar {
       position: fixed;
         transform: translateX(0); 
         height: 100vh;
+        width: 250px;
+        background-image: var(--gradiente);
     }
     .menu-toggle-btn, .close-btn {
         display: none; 
     }
     .header-container{
       width: 100%;
-      height: 100%;
+      height: 100vh;
       padding: 0;
-      background-image: var(--gradiente);background-color: var(--gradiente);
-    }
-
-    .user-card{
-      border: 1px solid gray;
-      border-radius: 2px;
-      
     }
     
   }

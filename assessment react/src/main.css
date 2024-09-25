@@ -18,6 +18,8 @@ header {
 
 .main-card {
     grid-area: main;
+    width:  100%;
+    height: 100vh;
 }
 
 footer{
@@ -46,6 +48,21 @@ footer{
     padding: 20px;
 }
 
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px;
+}
+
+.flex-layout{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  
+}
+
 @media (min-width: 992px) {
     .landing-page-container {
         display: grid;
@@ -68,6 +85,7 @@ footer{
     
     .main-card {
         grid-area: main;
+        width: 100%;
     }
     
     footer{
