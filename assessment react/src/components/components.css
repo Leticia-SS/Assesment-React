@@ -102,6 +102,12 @@
       padding: 0;
       background-image: var(--gradiente);background-color: var(--gradiente);
     }
+
+    .user-card{
+      border: 1px solid gray;
+      border-radius: 2px;
+      
+    }
     
   }
 

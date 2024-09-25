@@ -32,6 +32,13 @@ footer{
     justify-content: center;
 }
 
+.button-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
 @media (min-width: 992px) {
     .landing-page-container {
         display: grid;

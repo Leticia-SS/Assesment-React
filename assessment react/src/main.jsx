@@ -5,6 +5,8 @@ import Logo from '/logo.png'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import './main.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
+import { faBorderAll, faBarsStaggered } from '@fortawesome/free-solid-svg-icons';
 
 const Main = () => {
     const { users, loading, error } = FetchData()
@@ -17,7 +19,7 @@ const Main = () => {
         <Header/>
         <div className='main-card'>
             <div className='button-container'>
-                <button></button>
+                <button className='grid-btn'><FontAwesomeIcon icon={faBorderAll} /></button>
             </div>
             {users.map((user)=>(
                 <div key={user.id}>
