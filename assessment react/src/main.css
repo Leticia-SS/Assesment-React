@@ -32,10 +32,17 @@ footer{
     justify-content: center;
 }
 
-.button-container{
+.button-container {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    padding: 20px;
+}
+
+.button-container-left{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     padding: 20px;
 }
 

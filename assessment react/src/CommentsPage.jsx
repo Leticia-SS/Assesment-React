@@ -32,7 +32,9 @@ const CommentsPage = () => {
 
   return (
     <div className='comments-card'>
+      <div className='button-container-left'>
         <button onClick={() => navigate(-1)}><FontAwesomeIcon icon={faArrowLeft} /></button>
+        </div>
         {post && <Post post={post} />}
         {postComments.map((comment) => (
             <div key={comment.id}>

@@ -24,7 +24,9 @@ const PostsPage = () => {
         <div className='landing-page-container'>
         <Header/>
         <div className='main-card'>
-            <button onClick={() => navigate(-1)}>Back</button>
+            <div className='button-container-left'>
+                <button onClick={() => navigate(-1)}>Back</button>
+            </div>
             {user && <User user={user} />}
             {userPosts.map((post) => (
                 <div key={post.id}>
