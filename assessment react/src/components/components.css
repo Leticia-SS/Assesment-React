@@ -37,6 +37,11 @@
   .fa-bars, .fa-xmark{
     font-size: 20px;
   } 
+
+  .fa-hashtag, .fa-gear, .fa-house {
+    font-size: 20px;
+    padding-right: 20px;
+  }
   
   .close-btn {
     padding: 10px;
