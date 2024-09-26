@@ -1,4 +1,4 @@
-# AT Fundamentos e React
+# AT Fundamentos de React
 
 Este repositório contém o código-fonte do projeto final da matéria de Fundamentos de React. Siga as instruções abaixo para clonar o repositório, instalar as dependências e contribuir com o desenvolvimento.
 
